@@ -1,12 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Clone Repository') {
-            steps {
-                // Cloner le dépôt Git
-                git 'https://github.com/MohamedOMARI77/tp-jenkins.git'
-            }
-        }
         stage('Compile') {
             steps {
                 // Compiler les classes Java
