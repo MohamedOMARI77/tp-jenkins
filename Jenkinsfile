@@ -1,28 +1,25 @@
 pipeline {
     agent any
+    
     stages {
-        stage('Compile') {
+        stage('Build & Run HelloWorld') {
             steps {
-                // Compiler les classes Java
-                sh 'javac HelloWorld.java Merci.java Derien.java'
-            }
-        }
-        stage('Run HelloWorld') {
-            steps {
-                // Exécuter HelloWorld
+                sh 'javac HelloWorld.java'
                 sh 'java HelloWorld'
             }
         }
-        stage('Run Merci') {
+        
+        stage('Build & Run Merci') {
             steps {
-                // Exécuter Merci
+                sh 'javac Merci.java'
                 sh 'java Merci'
             }
         }
-        stage('Run DeRien') {
+        
+        stage('Build & Run DeRien') {
             steps {
-                // Exécuter DeRien
-                sh 'java Derien'
+                sh 'javac DeRien.java'
+                sh 'java DeRien'
             }
         }
     }
