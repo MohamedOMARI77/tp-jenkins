@@ -4,22 +4,22 @@ pipeline {
     stages {
         stage('Build & Run HelloWorld') {
             steps {
-                sh 'javac HelloWorld.java'
-                sh 'java HelloWorld'
+                bat 'javac HelloWorld.java'
+                bat 'java HelloWorld'
             }
         }
         
         stage('Build & Run Merci') {
             steps {
-                sh 'javac Merci.java'
-                sh 'java Merci'
+                bat 'javac Merci.java'
+                bat 'java Merci'
             }
         }
         
         stage('Build & Run DeRien') {
             steps {
-                sh 'javac DeRien.java'
-                sh 'java DeRien'
+                bat 'javac DeRien.java'
+                bat 'java DeRien'
             }
         }
     }
