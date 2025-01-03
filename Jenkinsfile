@@ -16,10 +16,10 @@ pipeline {
             }
         }
         
-        stage('Build & Run DeRien') {
+        stage('Build & Run Derien') {
             steps {
-                bat 'javac DeRien.java'
-                bat 'java DeRien'
+                bat 'javac Derien.java'
+                bat 'java Derien'
             }
         }
     }
